@@ -25,9 +25,9 @@
             display: none;
             margin-top: 20px;
         }
-        video {
+        iframe {
             width: 80%;
-            max-width: 600px;
+            max-width: 640px;
             border: 2px solid #5a189a;
             border-radius: 10px;
         }
@@ -38,10 +38,8 @@
     <p id="message">Aguarde até o dia 6 de janeiro para uma surpresa especial. 💜</p>
 
     <div id="video-container">
-        <video controls>
-            <source src="seu_video.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeos.
-        </video>
+        <!-- Video do Vimeo -->
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1043806586?h=21418ace03" width="640" height="360" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <script>
