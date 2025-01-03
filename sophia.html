@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Sophia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f0ff;
+            color: #5a189a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid #5a189a;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Aniversário, Sophia!</h1>
+    <p id="message">Aguarde até o dia 6 de janeiro para uma surpresa especial. 💜</p>
+
+    <div id="video-container">
+        <video controls>
+            <source src="seu-video.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+    </div>
+
+    <script>
+        // Configuração da data de liberação
+        const releaseDate = new Date('2025-01-06T00:00:00');
+        const currentDate = new Date();
+
+        // Elementos do DOM
+        const message = document.getElementById('message');
+        const videoContainer = document.getElementById('video-container');
+
+        // Verifica a data
+        if (currentDate >= releaseDate) {
+            message.style.display = 'none';
+            videoContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
